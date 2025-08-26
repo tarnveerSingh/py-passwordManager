@@ -6,7 +6,7 @@ from database import users_db
 
 def generate_key():
     """Generate a new encryption key and save it in .env"""
-    key = Fernet.generate_key().decode()  # decode bytes → str
+    key = Fernet.generate_key().decode() # decode bytes → str
 
     env_file = ".env"
 
