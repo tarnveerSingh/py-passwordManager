@@ -1,6 +1,8 @@
 from cryptography.fernet import Fernet
 from dotenv import set_key
 import os
+from dotenv import load_dotenv
+from database import users_db
 
 def generate_key():
     """Generate a new encryption key and save it in .env"""
@@ -16,8 +18,7 @@ def generate_key():
     set_key(env_file, "SECRET_KEY", key)
     print("🔑 Encryption key generated and saved in .env")
 
-from dotenv import load_dotenv
-import os
+
 
 def load_key():
     """Load the encryption key from .env"""

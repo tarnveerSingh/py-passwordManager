@@ -15,3 +15,14 @@ def create_database():
     conn.commit()
     conn.close()
     print("✅ Database and table ready.")
+# Mock user database for authentication
+users_db = {
+    "admin": {
+        "password": "pass123",
+        "notes": []
+    },
+    "john": {
+        "password": "john123",
+        "notes": []
+    }
+}
